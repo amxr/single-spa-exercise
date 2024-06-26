@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 // @ts-ignore
-import { sendMessage, getMessageAsText, eventHandler, AppView} from "@verint/common";
+import { sendMessage, getMessageAsText, eventHandler, AppView } from "@verint/common";
 
 export default function Root(props) {
   const appName = "app 2";
