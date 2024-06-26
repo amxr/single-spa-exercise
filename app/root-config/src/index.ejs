@@ -34,7 +34,9 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js"
       }
     }
   </script>
@@ -48,7 +50,10 @@
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@verint/root-config": "//localhost:9000/verint-root-config.js"
+        "@verint/root-config": "//localhost:9000/verint-root-config.js",
+        "@verint/common": "//localhost:9001/verint-common.js",
+        "@verint/app1": "//localhost:9002/verint-app1.js",
+        "@verint/app2": "//localhost:9003/verint-app2.js"
       }
     }
   </script>
