@@ -1,3 +1,31 @@
+import React, {useEffect, useState} from "react";
+// @ts-ignore
+import { sendMessage, getMessageAsText, eventHandler, AppView } from "@verint/common";
+
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  const appName = "app 1";
+  const recipient = "app 2";
+  const [messages, setMessages] = useState<string[]>([]);
+
+  useEffect(() => {
+    const subscription = eventHandler.subscribe(({message, recipient}) => {
+      if (recipient === appName){
+        setMessages((prev) => [...prev, getMessageAsText(message)]);
+      }
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    }
+  }, []);
+
+  const doSend = () => {
+    sendMessage(appName, recipient);
+  }
+  return <AppView
+      doClick={doSend}
+      messages={messages}
+      recipient={recipient}
+      name={props.name}
+  />;
 }
