@@ -2,7 +2,9 @@
   "name": "single-spa-exercise",
   "version": "1.0.0",
   "description": "single-spa exercise",
-  "main": "index.js",
+  "workspaces": [
+    "app/*"
+  ],
   "scripts": {
     "start": "lerna run start --stream",
     "test": "echo \"Error: no test specified\" && exit 1"
