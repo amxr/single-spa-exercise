@@ -9,9 +9,6 @@
   },
   "author": "amir",
   "license": "ISC",
-  "devDependencies": {
-    "webpack": "^5.89.0"
-  },
   "dependencies": {
     "lerna": "^8.1.5"
   }
